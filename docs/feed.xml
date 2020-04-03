@@ -1,0 +1,12 @@
+
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <title>Ga11ery</title>
+    <link></link>
+    <description>An Eleventy gallery theme</description>
+    <language>en-us</language>
+    <lastBuildDate>2020-04-02T15:51:06.349Z</lastBuildDate>
+    <atom:link href="https://every-layout.dev/feed.xml" rel="self" type="application/rss+xml" />
+    
+  </channel>
+</rss>

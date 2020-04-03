@@ -1,0 +1,25 @@
+{
+  "name": "ga11ery",
+  "version": "0.1.0",
+  "description": "An Eleventy gallery theme",
+  "main": ".eleventy.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "eleventy --serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Heydon/ga11ery.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Heydon/ga11ery/issues"
+  },
+  "homepage": "https://github.com/Heydon/ga11ery#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.10.0",
+    "@11ty/eleventy-plugin-rss": "^1.0.7",
+    "html-minifier": "^4.0.0"
+  }
+}

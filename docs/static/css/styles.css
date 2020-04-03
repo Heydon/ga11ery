@@ -1,0 +1,63 @@
+html {
+  text-align: center;
+  font-family: monospace;
+  font-size: 125%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  color: inherit;
+}
+
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  width: auto;
+  max-height: 80vh;
+  height: auto;
+}
+
+main {
+  margin: auto;
+}
+
+figure img {
+  margin: 0 auto;
+}
+
+nav, header, main {
+  padding: 1em;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0.5em;
+}
+
+nav a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+nav a > * + * {
+  margin-left: 0.333em;
+}
+
+.icon {
+  width: 1.5ex;
+  height: 1.5ex;
+  fill: currentColor;
+}
+
+h1 {
+  font-size: 1em;
+}

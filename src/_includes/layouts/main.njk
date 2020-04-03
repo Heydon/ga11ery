@@ -1,0 +1,33 @@
+---
+tags: []
+pagination:
+  data: collections.posts
+  size: 2
+---
+
+{% include 'layouts/head.njk' %}
+<div class="wrapper">
+  <header>
+    <div class="caption" id="description">
+      <h1>{{ title }}</h1>
+      {% if date %}
+      <time datetime="{{ date | w3cDateFilter }}">
+        ({{ date | dateFilter }})
+      </time>
+      {% endif %}
+    </div>
+  </header>
+  <main>
+    <figure>
+      <img src="{{site.basedir}}{{ image }}" alt="{{ alt }}" aria-describedby="description">
+    </figure>
+  </main>
+  <ol>
+    <li>{% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">Previous</a>{% else %}Previous{% endif %}</li>
+{%- for pageEntry in pagination.pages %}
+    <li><a href="{{ pagination.hrefs[ loop.index0 ] }}"{% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page"{% endif %}>Page {{ loop.index }}</a></li>
+{%- endfor %}
+    <li>{% if pagination.href.next %}<a href="{{ pagination.href.next }}">Next</a>{% else %}Next{% endif %}</li>
+  </ol>
+</div>
+{% include 'layouts/foot.njk' %}

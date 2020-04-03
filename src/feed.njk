@@ -1,0 +1,24 @@
+---
+permalink: feed.xml
+eleventyExcludeFromCollections: true
+---
+
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <title>{{ site.feed.title }}</title>
+    <link>{{ site.fullUrl }}</link>
+    <description>{{ site.feed.desc }}</description>
+    <language>en-us</language>
+    <lastBuildDate>{{ page.date | w3cDateFilter }}</lastBuildDate>
+    <atom:link href="https://every-layout.dev/feed.xml" rel="self" type="application/rss+xml" />
+    {% for post in collections.posts %}
+    <item>
+      <title>{{ post.data.title }}</title>
+      <link>{{ site.fullUrl }}{{ post.url }}</link>
+      <pubDate>{{ post.date | w3cDateFilter }}</pubDate>
+      <guid>{{ site.fullUrl }}{{ post.url }}</guid>
+      <description>{{ post.templateContent | htmlToAbsoluteUrls(site.fullUrl) }}</description>
+    </item>
+    {% endfor %}
+  </channel>
+</rss>

@@ -1,0 +1,8 @@
+{
+  "name": "ga11ery",
+  "basedir": "",
+  "feed": {
+    "title": "Ga11ery",
+    "desc": "An Eleventy gallery theme"
+  }
+}
