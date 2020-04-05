@@ -1,0 +1,23 @@
+{% set latest = collections.posts[collections.posts.length - 1] %}
+{% include 'layouts/head.njk' %}
+<div class="wrapper">
+  <header>
+    <div class="caption" id="description">
+      <h1>{{ latest.data.title }}</h1>
+      {% if latest.data.date %}
+      <time datetime="{{ latest.data.date | w3cDateFilter }}">
+        ({{ latest.data.date | dateFilter }})
+      </time>
+      {% endif %}
+    </div>
+  </header>
+  <main>
+    <figure>
+      <a href="{{site.basedir}}{{ latest.data.image }}">
+        <img src="{{site.basedir}}{{ latest.data.image }}" alt="{{ latest.data.alt }} (press to enlarge)" aria-describedby="description" loading="lazy">
+      </a>
+    </figure>
+  </main>
+  {% include 'layouts/nav.njk' %}
+</div>
+{% include 'layouts/foot.njk' %}

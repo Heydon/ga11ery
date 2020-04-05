@@ -3,6 +3,10 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{site.basedir}}/static/css/styles.css" />
-    <title>{{ title }} : {{ site.name }}</title>
+    {% if home %}
+    <link rel="canonical" href="{{site.fullUrl}}{{latest.url}}" />
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    {% endif %}
+    <title>{% if not home %}{{ title }} : {% endif %}{{ site.name }}</title>
   </head>
   <body>

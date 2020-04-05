@@ -1,4 +1,8 @@
-{% set links = collections.posts | navLinks(page) %}
+{% if  home %}
+  {% set links = collections.posts | navLinks(collections.posts[collections.posts.length - 1]) %}
+{% else %}
+  {% set links = collections.posts | navLinks(page) %}
+{% endif %}
 <nav aria-label="posts">
   <ul>
     {% if links.first %}
