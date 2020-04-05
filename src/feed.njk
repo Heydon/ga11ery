@@ -17,7 +17,9 @@ eleventyExcludeFromCollections: true
       <link>{{ site.fullUrl }}{{ post.url }}</link>
       <pubDate>{{ post.date | w3cDateFilter }}</pubDate>
       <guid>{{ site.fullUrl }}{{ post.url }}</guid>
-      <description>{{ post.templateContent | htmlToAbsoluteUrls(site.fullUrl) }}</description>
+      <description>
+        <img src="{{ site.fullUrl }}{{ post.data.image }}" alt="{{ post.data.alt }}" />
+      </description>
     </item>
     {% endfor %}
   </channel>

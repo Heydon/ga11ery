@@ -1,10 +1,3 @@
----
-tags: []
-pagination:
-  data: collections.posts
-  size: 2
----
-
 {% include 'layouts/head.njk' %}
 <div class="wrapper">
   <header>
@@ -19,15 +12,11 @@ pagination:
   </header>
   <main>
     <figure>
-      <img src="{{site.basedir}}{{ image }}" alt="{{ alt }}" aria-describedby="description">
+      <a href="{{site.basedir}}{{ image }}">
+        <img src="{{site.basedir}}{{ image }}" alt="{{ alt }} (press to enlarge)" aria-describedby="description">
+      </a>
     </figure>
   </main>
-  <ol>
-    <li>{% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">Previous</a>{% else %}Previous{% endif %}</li>
-{%- for pageEntry in pagination.pages %}
-    <li><a href="{{ pagination.hrefs[ loop.index0 ] }}"{% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page"{% endif %}>Page {{ loop.index }}</a></li>
-{%- endfor %}
-    <li>{% if pagination.href.next %}<a href="{{ pagination.href.next }}">Next</a>{% else %}Next{% endif %}</li>
-  </ol>
+  {% include 'layouts/nav.njk' %}
 </div>
 {% include 'layouts/foot.njk' %}

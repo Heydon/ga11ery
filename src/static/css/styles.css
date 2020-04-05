@@ -1,27 +1,31 @@
 html {
   text-align: center;
   font-family: monospace;
-  font-size: 125%;
 }
 
 * {
   margin: 0;
   padding: 0;
   color: inherit;
+  box-sizing: border-box;
+}
+
+[href]:focus {
+  outline: 1px solid;
+  outline-offset: 0.125em;
 }
 
 .wrapper {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 
 img {
   display: block;
   max-width: 100%;
   width: auto;
-  max-height: 80vh;
+  max-height: calc(100vh - 10rem);
   height: auto;
 }
 
@@ -34,7 +38,16 @@ figure img {
 }
 
 nav, header, main {
+  flex-shrink: 1;
+  flex-grow: 0;
   padding: 1em;
+}
+
+main {
+  padding: 0 1em;
+  flex-grow: 999;
+  display: flex;
+  align-items: center;
 }
 
 nav li {
@@ -44,20 +57,32 @@ nav li {
 
 nav a {
   text-decoration: none;
-  display: flex;
-  align-items: center;
+  display: inline-block;
 }
 
 nav a > * + * {
   margin-left: 0.333em;
 }
 
+nav a span {
+  display: block;
+}
+
 .icon {
-  width: 1.5ex;
-  height: 1.5ex;
+  width: 0.8em;
+  height: 0.8em;
   fill: currentColor;
 }
 
+.icon.random {
+  width: 1.6em;
+}
+
+.icon.rss {
+  fill: none;
+  stroke: currentColor;
+}
+
 h1 {
-  font-size: 1em;
+  font-size: 1.5em;
 }

@@ -1,36 +1,66 @@
+{% set links = collections.posts | navLinks(page) %}
 <nav aria-label="posts">
   <ul>
+    {% if links.first %}
     <li>
-      <a href="#">
+      <a href="{{site.basedir}}{{links.first.url}}">
         <svg viewBox="0 0 16 16" class="icon first">
           <path d="M0,8 16,0 16,16 M0,0 4,0 4,16 0,16" />
         </svg>
         <span>first</span>
       </a>
     </li>
+    {% endif %}
+    {% if links.prev %}
     <li>
-      <a href="#">
+      <a href="{{site.basedir}}{{links.prev.url}}">
         <svg viewBox="0 0 16 16" class="icon prev">
           <path d="M0,8 16,0 16,16" />
         </svg>
-        <span>previous</span>
+        <span>prev</span>
       </a>
     </li>
-    <li><a href="#">random</a></li>
+    {% endif %}
+    {% if links.random %}
     <li>
-      <a href="#">
-        <span>next</span>
+      <a href="{{site.basedir}}{{links.random.url}}">
+        <svg viewBox="0 0 16 10" class="icon random">
+          <path d="M0,2 5,2 11,8 13,8 M0,8 5,8 11,2 13,2" fill="none" stroke-width="2" stroke="currentColor" />
+          <path d="M13,0 16,2 13,4" fill="#000" />
+          <path d="M13,6 16,8 13,10" fill="#000" />
+        </svg>
+        <span>random</span>
+      </a>
+    </li>
+    {% endif %}
+    {% if links.next %}
+    <li>
+      <a href="{{site.basedir}}{{links.next.url}}">
         <svg viewBox="0 0 16 16" class="icon next">
           <path d="M0,0 16,8 0,16" />
         </svg>
+        <span>next</span>
       </a>
     </li>
+    {% endif %}
+    {% if links.last %}
     <li>
-      <a href="#">
-        <span>last</span>
+      <a href="{{site.basedir}}{{links.last.url}}">
         <svg viewBox="0 0 16 16" class="icon last">
           <path d="M0,0 16,8 0,16 M12,0 16,0 16,16 12,16" />
         </svg>
+        <span>last</span>
+      </a>
+    </li>
+    {% endif %}
+    <li>
+      <a href="{{site.basedir}}/feed.xml">
+        <svg viewBox="0 0 32 32" class="icon rss">
+          <circle cx="5" cy="27" r="5" fill="currentColor" stroke="none"/>
+          <circle cx="0" cy="32" r="18" stroke-width="7"/>
+          <circle cx="0" cy="32" r="28" stroke-width="7"/>
+        </svg>
+        <span>RSS</span>
       </a>
     </li>
   </ul>

@@ -1,6 +1,7 @@
 {
   "name": "ga11ery",
   "basedir": "",
+  "fullUrl": "https://github.io/heydon/ga11ery",
   "feed": {
     "title": "Ga11ery",
     "desc": "An Eleventy gallery theme"
