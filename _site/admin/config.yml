@@ -6,7 +6,7 @@ media_folder: 'images'
 collections:
   - name: 'posts'
     label: 'Posts'
-    folder: 'posts'
+    folder: 'src/posts'
     create: true
     slug: '{{slug}}'
     fields:
