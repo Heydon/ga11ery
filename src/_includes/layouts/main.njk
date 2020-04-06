@@ -1,22 +1,41 @@
+{% if home %}
+  {% set latest = collections.posts[collections.posts.length - 1].data %}
+  {% set title = latest.title %}
+  {% set date = latest.date %}
+  {% set description = latest.description %}
+  {% set image = latest.image %}
+  {% set alt = latest.alt %}
+{% endif %}
 {% include 'layouts/head.njk' %}
 <div class="wrapper">
   <header>
-    <div class="caption" id="description">
+    <div class="caption" id="meta">
       <h1>{{ title }}</h1>
       {% if date %}
       <time datetime="{{ date | w3cDateFilter }}">
-        ({{ date | dateFilter }})
+        {{ date | dateFilter }}
       </time>
+      {% endif %}
+      {% if description %}
+      <button class="q" aria-label="show description" hidden>[?]</button>
       {% endif %}
     </div>
   </header>
   <main>
     <figure>
-      <a href="{{site.basedir}}{{ image }}">
-        <img src="{{site.basedir}}{{ image }}" alt="{{ alt }} (press to enlarge)" aria-describedby="description" loading="lazy">
+      <a href="{{ site.basedir }}{{ image }}">
+        <img src="{{ site.basedir }}{{ image }}" alt="{{ alt }} (press to enlarge)" aria-describedby="meta" loading="lazy">
       </a>
     </figure>
   </main>
   {% include 'layouts/nav.njk' %}
 </div>
+{% if description %}
+<div role="dialog" aria-labelledby="desc" tabindex="-1">
+  <div>
+    <p id="desc">{{ description }}</p>
+    <button class="close" aria-label="close" hidden>[close]</button>
+  </div>
+</div>
+{% endif %}
 {% include 'layouts/foot.njk' %}

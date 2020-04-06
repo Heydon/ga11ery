@@ -10,9 +10,13 @@ html {
   box-sizing: border-box;
 }
 
-[href]:focus {
+p {
+  line-height: 1.25;
+}
+
+:focus {
   outline: 1px solid;
-  outline-offset: 0.125em;
+  outline-offset: 0.25em;
 }
 
 .wrapper {
@@ -24,30 +28,19 @@ html {
 img {
   display: block;
   max-width: 100%;
-  width: auto;
   max-height: calc(100vh - 10rem);
-  height: auto;
 }
 
 main {
   margin: auto;
 }
 
-figure img {
-  margin: 0 auto;
-}
-
 nav, header, main {
-  flex-shrink: 1;
-  flex-grow: 0;
   padding: 1em;
 }
 
 main {
   padding: 0 1em;
-  flex-grow: 999;
-  display: flex;
-  align-items: center;
 }
 
 nav li {
@@ -85,4 +78,43 @@ nav a span {
 
 h1 {
   font-size: 1.5em;
+}
+
+.with-js [role="dialog"] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  color: #fff;
+}
+
+.with-js [role="dialog"] p {
+  text-align: left;
+  max-width: 60ch;
+}
+
+.with-js [role="dialog"][hidden] {
+  display: none;
+}
+
+button {
+  all: initial;
+  font-family: inherit;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.close {
+  color: #fff;
+  margin: 0.5em;
+}
+
+button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
 }

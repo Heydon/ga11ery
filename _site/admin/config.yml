@@ -13,5 +13,6 @@ collections:
     fields:
       - {label: 'Title', name: 'title', widget: 'string'}
       - {label: 'Image', name: 'image', widget: 'image'}
-      - {label: 'Alternative text', name: 'alt', widget: 'string'}
+      - {label: 'Alternative text', name: 'alt', widget: 'string', hint: 'Describe the image for the blind. What can you see in it? What does it represent?'}
+      - {label: 'Full description', name: 'description', widget: 'text', required: false}
       - {label: 'Publish date', name: 'date', widget: 'datetime'}

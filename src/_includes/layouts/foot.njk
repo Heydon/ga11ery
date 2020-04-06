@@ -1,15 +1,40 @@
-  {% if home %}
-  <script>
-    if (window.netlifyIdentity) {
-      window.netlifyIdentity.on("init", user => {
-        if (!user) {
-          window.netlifyIdentity.on("login", () => {
-            document.location.href = "/admin/";
-          });
-        }
-      });
-    }
-  </script>
-  {% endif %}
-</body>
+    {% if home %}
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
+    {% endif %}
+
+    <script type="module">
+      (function() {
+        document.body.classList.add('with-js');
+        const button = document.querySelector('.q');
+        const wrapper = document.querySelector('.wrapper');
+        const dialog = document.querySelector('[role="dialog"]');
+        const close = document.querySelector('.close');
+
+        dialog.hidden = true;
+        button.hidden = false;
+        close.hidden = false;
+
+        button.addEventListener('click', () => {
+          dialog.hidden = false;
+          wrapper.setAttribute('inert', 'inert');
+          dialog.focus();
+        });
+
+        close.addEventListener('click', () => {
+          dialog.hidden = true;
+          button.focus();
+        })
+      })();
+    </script>
+  </body>
 </html>
