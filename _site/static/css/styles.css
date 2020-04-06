@@ -81,9 +81,6 @@ h1 {
 }
 
 .with-js [role="dialog"] {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: absolute;
   top: 0;
   right: 0;
@@ -91,6 +88,16 @@ h1 {
   left: 0;
   background-color: #000;
   color: #fff;
+  overflow-y: auto;
+}
+
+.with-js [role="dialog"] > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1em;
 }
 
 .with-js [role="dialog"] p {
