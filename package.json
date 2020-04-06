@@ -5,8 +5,8 @@
   "main": ".eleventy.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "eleventy --serve",
-    "build": "eleventy"
+    "serve": "postcss ./src/_includes/styles.css > ./src/_includes/styles.min.css && eleventy --serve",
+    "build": "postcss ./src/_includes/styles.css > ./src/_includes/styles.min.css && eleventy"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,9 @@
   "devDependencies": {
     "@11ty/eleventy": "^0.10.0",
     "@11ty/eleventy-plugin-rss": "^1.0.7",
-    "html-minifier": "^4.0.0"
+    "cssnano": "^4.1.10",
+    "html-minifier": "^4.0.0",
+    "postcss": "^7.0.27",
+    "postcss-cli": "^7.1.0"
   }
 }

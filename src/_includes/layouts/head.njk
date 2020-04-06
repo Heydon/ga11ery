@@ -2,7 +2,9 @@
 <html lang="en">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{site.basedir}}/static/css/styles.css" />
+    <style>
+      {% include 'styles.min.css' %}
+    </style>
     {% if home %}
     <link rel="canonical" href="{{site.fullUrl}}{{latest.url}}" />
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>

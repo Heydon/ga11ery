@@ -58,5 +58,15 @@
       </description>
     </item>
     
+    <item>
+      <title>CERN</title>
+      <link>https://github.io/heydon/ga11ery/posts/cern/</link>
+      <pubDate>2020-04-06T14:39:06.327Z</pubDate>
+      <guid>https://github.io/heydon/ga11ery/posts/cern/</guid>
+      <description>
+        <img src="https://github.io/heydon/ga11ery/images/tunnel.png" alt="The LHC tunnel being dug out. Pictured is a track entering the tunnel." />
+      </description>
+    </item>
+    
   </channel>
 </rss>
