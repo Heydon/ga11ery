@@ -17,13 +17,16 @@ collections:
       - {label: "Alternative text", name: "alt", widget: "string", hint: "Describe the image for the blind. What can you see in it?"}
       - {label: "Full description", name: "description", widget: "text", required: false}
       - {label: "Publish date", name: "date", widget: "datetime"}
-  - name: "settings"
-    label: "Settings"
-    delete: false,
-    file: "src/_data/site.json"
-    fields:
-      - {label: "Site Name", name: "name", widget: "string"}
-      - {label: "Site description", name: "description", widget: "string", hint: "Primarily used to describe the RSS feed"}
-      - {label: "Site Url", name: "fullUrl", widget: "string", hint: "The full URL, representing the root of the site"}
-      - {label: "Author", name: "author", widget: "string", hint: "Your name, or the name of the person who creates/curates the content", required: false}
-      - {label: "Author link", name: "authorLink", widget: "string", hint: "The web address to the author's social media profile or personal site", required: false}
+  - label: "Settings"
+    name: "settings"
+    files:
+      - label: "Site info"
+        name: "siteInfo"
+        file: "src/_data/site.json"
+        delete: false
+        fields:
+          - {label: "Site Name", name: "name", widget: "string"}
+          - {label: "Site description", name: "description", widget: "string", hint: "Primarily used to describe the RSS feed"}
+          - {label: "Site Url", name: "fullUrl", widget: "string", hint: "The full URL, representing the root of the site"}
+          - {label: "Author", name: "author", widget: "string", hint: "Your name, or the name of the person who creates/curates the content", required: false}
+          - {label: "Author link", name: "authorLink", widget: "string", hint: "The web address to the author's social media profile or personal site", required: false}
