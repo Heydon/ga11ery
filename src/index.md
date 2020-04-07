@@ -1,4 +1,4 @@
 ---
-layout: 'layouts/main.njk'
+layout: 'main'
 home: true
 ---

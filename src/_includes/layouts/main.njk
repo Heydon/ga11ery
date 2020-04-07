@@ -23,7 +23,7 @@
   </header>
   <main>
     <figure>
-      <a href="{{ site.basedir }}{{ image }}">
+      <a href="{{ site.basedir }}{% if larger %}{{ larger }}{% else %}{{ image }}{% endif %}">
         <img src="{{ site.basedir }}{{ image }}" alt="{{ alt }} (press to enlarge)" aria-describedby="meta" loading="lazy">
       </a>
     </figure>

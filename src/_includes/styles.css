@@ -1,6 +1,11 @@
 html {
   text-align: center;
-  font-family: monospace;
+  --color-light: #fff;
+  background-color: var(--color-light);
+  --color-dark: #000;
+  color: var(--color-dark);
+  --family: monospace;
+  font-family: var(--family);
 }
 
 * {
@@ -86,8 +91,8 @@ h1 {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: #000;
-  color: #fff;
+  background-color: var(--color-dark);
+  color: var(--color-light);
   overflow-y: auto;
 }
 
@@ -111,17 +116,29 @@ h1 {
 
 button {
   all: initial;
+  color: inherit;
   font-family: inherit;
   cursor: pointer;
   font-weight: bold;
 }
 
 .close {
-  color: #fff;
   margin: 0.5em;
 }
 
 button::-moz-focus-inner {
   border: 0;
   padding: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    --color-light: #000;
+    --color-dark: #fff;
+  }
+
+  [role="dialog"] {
+    --color-dark: #000;
+    --color-light: #fff;
+  }
 }
