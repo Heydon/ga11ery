@@ -2,28 +2,28 @@ backend:
   name: git-gateway
   branch: master # Branch to update (optional; defaults to master)
 publish_mode: editorial_workflow
-media_folder: '_site/images'
-public_folder: '/images'
+media_folder: "_site/images"
+public_folder: "/images"
 collections:
-  - name: 'posts'
-    label: 'Post'
-    folder: 'src/posts'
+  - name: "posts"
+    label: "Post"
+    folder: "src/posts"
     create: true
-    slug: '{{slug}}'
+    slug: "{{slug}}"
     fields:
-      - {label: 'Title', name: 'title', widget: 'string'}
-      - {label: 'Image', name: 'image', widget: 'image'}
-      - {label: 'Larger image', name: 'larger', widget: 'image', hint: 'If supplied, the main image will link to this one', required: false}
-      - {label: 'Alternative text', name: 'alt', widget: 'string', hint: 'Describe the image for the blind. What can you see in it?'}
-      - {label: 'Full description', name: 'description', widget: 'text', required: false}
-      - {label: 'Publish date', name: 'date', widget: 'datetime'}
-  - name: 'settings'
-    label: 'Settings'
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Image", name: "image", widget: "image"}
+      - {label: "Larger image", name: "larger", widget: "image", hint: "If supplied, the main image will link to this one", required: false}
+      - {label: "Alternative text", name: "alt", widget: "string", hint: "Describe the image for the blind. What can you see in it?"}
+      - {label: "Full description", name: "description", widget: "text", required: false}
+      - {label: "Publish date", name: "date", widget: "datetime"}
+  - name: "settings"
+    label: "Settings"
     delete: false,
-    file: 'src/_data/site.json'
+    file: "src/_data/site.json"
     fields:
-      - {label: 'Site Name', name: 'name', widget: 'string'}
-      - {label: 'Site description', name: 'description', widget: 'string', hint: 'Primarily used to describe the RSS feed'}
-      - {label: 'Site Url', name: 'fullUrl', widget: 'string', hint: 'The full URL, representing the root of the site'}
-      - {label: 'Author', name: 'author', widget: 'string', hint: 'Your name, or the name of the person who creates/curates the content', required: false}
-      - {label: 'Author link', name: 'authorLink', widget: 'string', hint: 'The web address to the author\'s social media profile or personal site', required: false}
+      - {label: "Site Name", name: "name", widget: "string"}
+      - {label: "Site description", name: "description", widget: "string", hint: "Primarily used to describe the RSS feed"}
+      - {label: "Site Url", name: "fullUrl", widget: "string", hint: "The full URL, representing the root of the site"}
+      - {label: "Author", name: "author", widget: "string", hint: "Your name, or the name of the person who creates/curates the content", required: false}
+      - {label: "Author link", name: "authorLink", widget: "string", hint: "The web address to the author's social media profile or personal site", required: false}
