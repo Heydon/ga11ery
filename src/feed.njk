@@ -5,9 +5,9 @@ eleventyExcludeFromCollections: true
 
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
   <channel>
-    <title>{{ site.feed.title }}</title>
+    <title>{{ site.name }}</title>
     <link>{{ site.fullUrl }}</link>
-    <description>{{ site.feed.desc }}</description>
+    <description>{{ site.description }}</description>
     <language>en-us</language>
     <lastBuildDate>{{ page.date | w3cDateFilter }}</lastBuildDate>
     <atom:link href="https://every-layout.dev/feed.xml" rel="self" type="application/rss+xml" />

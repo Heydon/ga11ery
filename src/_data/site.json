@@ -1,9 +1,8 @@
 {
   "name": "ga11ery",
+  "description": "An Eleventy gallery starter kit",
   "basedir": "",
-  "fullUrl": "https://github.io/heydon/ga11ery",
-  "feed": {
-    "title": "Ga11ery",
-    "desc": "An Eleventy gallery theme"
-  }
+  "fullUrl": "https://dazzling-villani-a8d2cc.netlify.com",
+  "author": "Heydon Pickering",
+  "authorLink": "https://heydonworks.com"
 }

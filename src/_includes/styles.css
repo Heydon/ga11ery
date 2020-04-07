@@ -33,7 +33,7 @@ p {
 img {
   display: block;
   max-width: 100%;
-  max-height: calc(100vh - 10rem);
+  max-height: calc(100vh - 12rem);
 }
 
 main {
@@ -53,16 +53,16 @@ nav li {
   margin: 0.5em;
 }
 
-nav a {
+nav ul a {
   text-decoration: none;
   display: inline-block;
 }
 
-nav a > * + * {
+nav ul a > * + * {
   margin-left: 0.333em;
 }
 
-nav a span {
+nav ul a span {
   display: block;
 }
 
@@ -74,11 +74,6 @@ nav a span {
 
 .icon.random {
   width: 1.6em;
-}
-
-.icon.rss {
-  fill: none;
-  stroke: currentColor;
 }
 
 h1 {
@@ -129,6 +124,11 @@ button {
 button::-moz-focus-inner {
   border: 0;
   padding: 0;
+}
+
+.meta {
+  font-size: 0.9em;
+  margin-top: 1em;
 }
 
 @media (prefers-color-scheme: dark) {
