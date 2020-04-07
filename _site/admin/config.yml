@@ -21,9 +21,8 @@ collections:
     name: "settings"
     files:
       - label: "Site info"
-        name: "siteInfo"
+        name: "siteinfo"
         file: "src/_data/site.json"
-        delete: false
         fields:
           - {label: "Site Name", name: "name", widget: "string"}
           - {label: "Site description", name: "description", widget: "string", hint: "Primarily used to describe the RSS feed"}
