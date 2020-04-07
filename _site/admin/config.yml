@@ -24,6 +24,6 @@ collections:
     fields:
       - {label: 'Site Name', name: 'name', widget: 'string'}
       - {label: 'Site description', name: 'description', widget: 'string', hint: 'Primarily used to describe the RSS feed'}
-      - {label: 'Site Url', name: 'fullUrl', widget: 'string', hint: 'The full URL, starting with http, and representing the root of the site'}
+      - {label: 'Site Url', name: 'fullUrl', widget: 'string', hint: 'The full URL, representing the root of the site'}
       - {label: 'Author', name: 'author', widget: 'string', hint: 'Your name, or the name of the person who creates/curates the content', required: false}
       - {label: 'Author link', name: 'authorLink', widget: 'string', hint: 'The web address to the author\'s social media profile or personal site', required: false}
