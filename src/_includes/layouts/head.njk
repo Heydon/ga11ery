@@ -6,9 +6,29 @@
       {% include 'styles.min.css' %}
     </style>
     {% if home %}
-    <link rel="canonical" href="{{site.fullUrl}}{{latest.url}}" />
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <link rel="canonical" href="{{ base }}{{ originalUrl }}" />
     {% endif %}
+    <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="{{ base }}/feed.xml">
+    <link rel="icon" href="{{ base }}/images/favicon.svg" type="image/svg+xml">
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <meta property="og:site_name" content="{{ site.name }}">
+    <meta property="og:title" content="{{ title }}">
+    <meta property="og:url" content="{{ base }}{{ page.url }}">
+    <meta property="og:image" content="{{ base }}{{ image }}">
     <title>{% if not home %}{{ title }} : {% endif %}{{ site.name }}</title>
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "ImageObject",
+        "name": "{{ title }}",
+        {% if site.author %}
+        "creator": "{{ site.author }}"
+        {% endif %}
+        {% if description %}
+        "description": "{{ description }}"
+        {% endif %}
+        "url": "{{ base }}{{ image }}"
+      }
+    </script>
   </head>
   <body>

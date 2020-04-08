@@ -5,7 +5,9 @@
   {% set description = latest.description %}
   {% set image = latest.image %}
   {% set alt = latest.alt %}
+  {% set originalUrl = latest.page.url %}
 {% endif %}
+{% set base = site.fullUrl if isBuild else "" %}
 {% include 'layouts/head.njk' %}
 <div class="wrapper">
   <header>
@@ -23,8 +25,8 @@
   </header>
   <main>
     <figure>
-      <a href="{{ site.basedir }}{% if larger %}{{ larger }}{% else %}{{ image }}{% endif %}">
-        <img src="{{ site.basedir }}{{ image }}" alt="{{ alt }} (press to enlarge)" aria-describedby="meta" loading="lazy">
+      <a href="{{ base }}{% if larger %}{{ larger }}{% else %}{{ image }}{% endif %}">
+        <img src="{{ base }}{{ image }}" alt="{{ alt }} (press to enlarge)" aria-describedby="meta" loading="lazy">
       </a>
     </figure>
   </main>
