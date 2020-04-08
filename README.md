@@ -16,7 +16,7 @@ A minimal image sharing site kit, built with [11ty](https://www.11ty.dev/) and [
 
 Deploy to Netlify, and follow the instructions. You will need to create a Netlify account if you don't have one.
 
-<a href="https://app.netlify.com/start/deploy?repository=&amp;stack=cms" rel="nofollow"><img src="https://camo.githubusercontent.com/be2eb66bb727e25655f1dcff88c2fdca82a77513/68747470733a2f2f7777772e6e65746c6966792e636f6d2f696d672f6465706c6f792f627574746f6e2e737667" alt="Deploy to Netlify" data-canonical-src="https://www.netlify.com/img/deploy/button.svg" style="max-width:100%;"></a>
+<a href="https://app.netlify.com/start/deploy?repository=https://github.com/Heydon/ga11ery&amp;stack=cms" rel="nofollow"><img src="https://camo.githubusercontent.com/be2eb66bb727e25655f1dcff88c2fdca82a77513/68747470733a2f2f7777772e6e65746c6966792e636f6d2f696d672f6465706c6f792f627574746f6e2e737667" alt="Deploy to Netlify" data-canonical-src="https://www.netlify.com/img/deploy/button.svg" style="max-width:100%;"></a>
 
 ### Step 2: Set up the CMS
 
