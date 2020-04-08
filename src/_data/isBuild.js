@@ -1,1 +1,1 @@
-module.exports = !(process.env.NODE_ENV === 'build')
+module.exports = process.env.NODE_ENV === 'build'
