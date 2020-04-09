@@ -1,7 +1,7 @@
 {
   "name": "Ga11ery",
   "version": "0.1.0",
-  "description": "An Eleventy gallery theme, with Netlify CMS",
+  "description": "A simple site kit for sharing photos, illustrations, or your web comic",
   "main": ".eleventy.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
