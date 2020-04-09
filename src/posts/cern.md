@@ -1,9 +1,9 @@
 ---
 title: CERN
-image: /images/tunnel.png
-alt: The LHC tunnel being dug out. Pictured is a track entering the tunnel.
+image: /images/cern1.jpg
+alt: A silhouette of a man standing at the bottom of a vast cylindrical structure
 description: >-
-  This image is a filtered version of the images available from the CERN
-  archives.
-date: 2020-04-06T14:39:06.327Z
+  This is a doctored photo based on one taken from CERN's archive. It was taken
+  during the contruction of the  Large Hadron Collider.
+date: 2020-04-09T16:07:44.235Z
 ---

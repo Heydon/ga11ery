@@ -2,6 +2,8 @@
 
 A minimal image sharing site kit, built with [11ty](https://www.11ty.dev/) and [NetlifyCMS](https://www.netlifycms.org/). Ideal for photography, illustration, and web comics. If you're more interested in sharing your creativity than messing around with host providers and complex website builders, **Ga11ery** is for you.
 
+![A photo displayed with Ga11ery. Above it is the photo's title, and below it is the next, previous, and random navigation](illustration.png)
+
 ## Features
 
 - Screen reader and keyboard accessible.
