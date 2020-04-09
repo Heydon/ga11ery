@@ -32,6 +32,7 @@ The CMS is configured and ready to use. But first, you need to set up authentica
 - Set a password in the popup box.
 - Go to `/admin` on your site and login.
 - You’re in and ready to edit your content!
+- **IMPORTANT: make sure you change Settings > Site info > Site URL to match the Netlify domain/URL of your new site, or your custom domain if configured**
 
 ### Step 3: That's it!
 
