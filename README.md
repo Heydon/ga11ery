@@ -24,10 +24,10 @@ Deploy to Netlify, and follow the instructions. You will need to create a Netlif
 
 The CMS is configured and ready to use. But first, you need to set up authentication. You can follow [Netlify's short guide](https://docs.netlify.com/visitor-access/identity/#enable-identity-in-the-ui) or the following steps (as found in the documentation for [Andy's Hylia starter kit](https://github.com/hankchizljaw/hylia):
 
-- Once you’ve set up the site on Netlify, go to “Settings” > “Identity” and enable Identity.
-- Scroll down to the “Git Gateway” area, click “Enable Git Gateway” and follow the steps.
-- Click the “Identity” tab at the top.
-- Once you’ve enabled identity, click “Invite Users”.
+- Once you’ve set up the site on Netlify, go to **Settings > Identity** and enable Identity.
+- Scroll down to the **Git Gateway** area, click **Enable Git Gateway** and follow the steps.
+- Click the **Identity** tab at the top.
+- Once you’ve enabled identity, click **Invite Users**.
 - Check the invite link in your inbox and click the link in the email that’s sent to you.
 - Set a password in the popup box.
 - Go to `/admin` on your site and login.
