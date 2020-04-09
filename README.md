@@ -4,6 +4,10 @@ A minimal image sharing site kit, built with [11ty](https://www.11ty.dev/) and [
 
 ![A photo displayed with Ga11ery. Above it is the photo's title, and below it is the next, previous, and random navigation](illustration.png)
 
+## Example
+
+[Here's a little demo site, with just 4 images](https://goofy-nightingale-8088ae.netlify.com)
+
 ## Features
 
 - Screen reader and keyboard accessible.
