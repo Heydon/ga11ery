@@ -27,7 +27,7 @@
     {% endif %}
     {% if links.random %}
     <li>
-      <a href="{{ base }}{{ links.random.url }}">
+      <a class="random" href="{{ base }}{{ links.random.url }}">
         <svg width="16" height="16" viewBox="0 0 16 10" class="icon random">
           <path d="M0,2 5,2 11,8 13,8 M0,8 5,8 11,2 13,2" fill="none" stroke-width="2" stroke="currentColor" />
           <path d="M13,0 16,2 13,4" fill="#000" />
@@ -66,3 +66,12 @@
     <a href="https://github.com/heydon/ga11ery">Get yours!</a>
   </div>
 </nav>
+<script type="module">
+  (function() {
+    const randomBtn = document.querySelector('.random');
+    const randomFive = '{{ links.randomFive }}'.split(',');
+    const randomNew = randomFive[Math.floor(Math.random() * randomFive.length)];
+    console.log(randomNew);
+    randomBtn.href = randomNew;
+  })();
+</script>
