@@ -41,7 +41,7 @@ main {
 }
 
 nav, header, main {
-  padding: 2em;
+  padding: 2em 1em;
 }
 
 main {
