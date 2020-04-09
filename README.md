@@ -38,6 +38,10 @@ The CMS is configured and ready to use. But first, you need to set up authentica
 
 Er... that's it!
 
+## Version history
+
+[0.1.0 Initial release](https://github.com/Heydon/ga11ery/releases/tag/0.1.0)
+
 ## Want to get writing instead?
 
 **Ga11ery** is just for sharing images. If you want a writing/blogging starter kit, try [**Hylia**](https://github.com/hankchizljaw/hylia).
