@@ -4,7 +4,6 @@
   {% set links = collections.posts | navLinks(page) %}
 {% endif %}
 <nav aria-label="posts">
-  {{ isBuild }}
   <ul>
     {% if links.first %}
     <li>
