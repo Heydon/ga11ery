@@ -8,7 +8,7 @@
     {% if links.first %}
     <li>
       <a href="{{ base }}{{ links.first.url }}">
-        <svg width="16" height="16" viewBox="0 0 16 16" class="icon first">
+        <svg aria-hidden="true" focusable="false"  width="16" height="16" viewBox="0 0 16 16" class="icon first">
           <path d="M0,8 16,0 16,16 M0,0 4,0 4,16 0,16" />
         </svg>
         <span>first</span>
@@ -18,7 +18,7 @@
     {% if links.prev %}
     <li>
       <a href="{{ base }}{{ links.prev.url }}">
-        <svg width="16" height="16" viewBox="0 0 16 16" class="icon prev">
+        <svg aria-hidden="true" focusable="false"  width="16" height="16" viewBox="0 0 16 16" class="icon prev">
           <path d="M0,8 16,0 16,16" />
         </svg>
         <span>prev</span>
@@ -28,7 +28,7 @@
     {% if links.random %}
     <li>
       <a class="random" href="{{ base }}{{ links.random.url }}">
-        <svg width="16" height="16" viewBox="0 0 16 10" class="icon random">
+        <svg aria-hidden="true" focusable="false"  width="16" height="16" viewBox="0 0 16 10" class="icon random">
           <path d="M0,2 5,2 11,8 13,8 M0,8 5,8 11,2 13,2" fill="none" stroke-width="2" stroke="currentColor" />
           <path d="M13,0 16,2 13,4" fill="#000" />
           <path d="M13,6 16,8 13,10" fill="#000" />
@@ -40,7 +40,7 @@
     {% if links.next %}
     <li>
       <a href="{{ base }}{{ links.next.url }}">
-        <svg width="16" height="16" viewBox="0 0 16 16" class="icon next">
+        <svg aria-hidden="true" focusable="false"  width="16" height="16" viewBox="0 0 16 16" class="icon next">
           <path d="M0,0 16,8 0,16" />
         </svg>
         <span>next</span>
@@ -50,7 +50,7 @@
     {% if links.last %}
     <li>
       <a href="{{ base }}{{ links.last.url }}">
-        <svg width="16" height="16" viewBox="0 0 16 16" class="icon last">
+        <svg aria-hidden="true" focusable="false"  width="16" height="16" viewBox="0 0 16 16" class="icon last">
           <path d="M0,0 16,8 0,16 M12,0 16,0 16,16 12,16" />
         </svg>
         <span>last</span>
@@ -71,7 +71,6 @@
     const randomBtn = document.querySelector('.random');
     const randomFive = '{{ links.randomFive }}'.split(',');
     const randomNew = randomFive[Math.floor(Math.random() * randomFive.length)];
-    console.log(randomNew);
     randomBtn.href = randomNew;
   })();
 </script>

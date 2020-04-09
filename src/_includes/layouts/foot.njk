@@ -12,6 +12,7 @@
     </script>
     {% endif %}
 
+    {% if description %}
     <script type="module">
       (function() {
         document.body.classList.add('with-js');
@@ -36,5 +37,6 @@
         })
       })();
     </script>
+    {% endif %}
   </body>
 </html>

@@ -110,7 +110,9 @@ h1 {
 }
 
 button {
-  all: initial;
+  border: 0;
+  padding: 0;
+  background: none;
   color: inherit;
   font-family: inherit;
   cursor: pointer;
@@ -129,6 +131,10 @@ button::-moz-focus-inner {
 .meta {
   font-size: 0.9em;
   margin-top: 1em;
+}
+
+.meta a {
+  white-space: nowrap;
 }
 
 @media (prefers-color-scheme: dark) {
