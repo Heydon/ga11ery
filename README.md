@@ -44,7 +44,7 @@ Er... that's it!
 
 ## Version history
 
-[0.1.0 Initial release](https://github.com/Heydon/ga11ery/releases/tag/0.1.0)
+* [0.1.0 Initial release](https://github.com/Heydon/ga11ery/releases/tag/0.1.0)
 
 ## Want to get writing instead?
 
