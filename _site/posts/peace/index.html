@@ -11,7 +11,7 @@
         "url": "/images/peace.png"
       }</script></head><body><div class="wrapper"><header><div class="caption" id="meta"><h1>Peace</h1><time datetime="2020-04-08T15:59:36.910Z">8th of April, 2020 </time><button class="q" aria-label="show description" hidden>[?]</button></div></header><main><figure><a href="/images/peace.png"><img src="/images/peace.png" alt="The sea weaves inland, between eroded rocks. A shoal of fish is seen darting under the water. A woman in a boat and a man swimming enjoy the sun. (press to enlarge)" aria-describedby="meta" loading="lazy"></a></figure></main><nav aria-label="posts"><ul><li><a class="random" href="/posts/smiling-marx/"><svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 10" class="icon random"><path d="M0,2 5,2 11,8 13,8 M0,8 5,8 11,2 13,2" fill="none" stroke-width="2" stroke="currentColor"/><path d="M13,0 16,2 13,4" fill="#000"/><path d="M13,6 16,8 13,10" fill="#000"/></svg> <span>random</span></a></li><li><a href="/posts/smiling-marx/"><svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" class="icon next"><path d="M0,0 16,8 0,16"/></svg> <span>next</span></a></li><li><a href="/posts/cern/"><svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" class="icon last"><path d="M0,0 16,8 0,16 M12,0 16,0 16,16 12,16"/></svg> <span>last</span></a></li></ul><div class="meta">by <a href="https://heydonworks.com">Heydon Pickering</a> &middot; <a href="/feed.xml"><span>RSS</span></a> &middot; <a href="https://github.com/heydon/ga11ery">Get yours!</a></div></nav><script type="module">(function() {
     const randomBtn = document.querySelector('.random');
-    const randomFive = '/posts/in-training/,/posts/smiling-marx/,/posts/cern/'.split(',');
+    const randomFive = '/posts/cern/,/posts/in-training/,/posts/smiling-marx/'.split(',');
     const randomNew = randomFive[Math.floor(Math.random() * randomFive.length)];
     randomBtn.href = randomNew;
   })();</script></div><div role="dialog" aria-labelledby="desc" tabindex="-1"><div><p id="desc">This is a pixel art take on the tranditional Chinese shan shui painting style, by Heydon Pickering.</p><button class="close" aria-label="close" hidden>[close]</button></div></div><script type="module">(function() {
@@ -25,14 +25,26 @@
         button.hidden = false;
         close.hidden = false;
 
-        button.addEventListener('click', () => {
+        const openDesc = () => {
           dialog.hidden = false;
           wrapper.setAttribute('inert', 'inert');
           dialog.focus();
-        });
+          window.addEventListener('keydown', function escaped(e) {
+            if (e.key === 'Escape') {
+              closeDesc();
+              window.removeEventListener('keydown', escaped);
+            }
+          });
+        }
 
-        close.addEventListener('click', () => {
+        const closeDesc = () => {
           dialog.hidden = true;
+          wrapper.removeAttribute('inert');
           button.focus();
-        })
+        }
+
+        button.addEventListener('click', openDesc);
+        close.addEventListener('click', closeDesc);
+
+
       })();</script></body></html>

@@ -9,9 +9,9 @@
         "description": "Rainbow was a British television series. It wasn&#39;t very good, and its companion comic was even worse."
         
         "url": "/images/comic2.png"
-      }</script></head><body><div class="wrapper"><header><div class="caption" id="meta"><h1>In Training</h1><time datetime="2020-04-09T10:01:55.472Z">9th of April, 2020 </time><button class="q" aria-label="show description" hidden>[?]</button></div></header><main><figure><a href="/images/comic2.png"><img src="/images/comic2.png" alt="Old Rainbow comic strip with the text changed. The dialogue is now about finger sucking because all the characters appear to have their fingers in their mouths. (press to enlarge)" aria-describedby="meta" loading="lazy"></a></figure></main><nav aria-label="posts"><ul><li><a href="/posts/peace/"><svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" class="icon first"><path d="M0,8 16,0 16,16 M0,0 4,0 4,16 0,16"/></svg> <span>first</span></a></li><li><a href="/posts/smiling-marx/"><svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" class="icon prev"><path d="M0,8 16,0 16,16"/></svg> <span>prev</span></a></li><li><a class="random" href="/posts/cern/"><svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 10" class="icon random"><path d="M0,2 5,2 11,8 13,8 M0,8 5,8 11,2 13,2" fill="none" stroke-width="2" stroke="currentColor"/><path d="M13,0 16,2 13,4" fill="#000"/><path d="M13,6 16,8 13,10" fill="#000"/></svg> <span>random</span></a></li><li><a href="/posts/cern/"><svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" class="icon next"><path d="M0,0 16,8 0,16"/></svg> <span>next</span></a></li><li><a href="/posts/cern/"><svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" class="icon last"><path d="M0,0 16,8 0,16 M12,0 16,0 16,16 12,16"/></svg> <span>last</span></a></li></ul><div class="meta">by <a href="https://heydonworks.com">Heydon Pickering</a> &middot; <a href="/feed.xml"><span>RSS</span></a> &middot; <a href="https://github.com/heydon/ga11ery">Get yours!</a></div></nav><script type="module">(function() {
+      }</script></head><body><div class="wrapper"><header><div class="caption" id="meta"><h1>In Training</h1><time datetime="2020-04-09T10:01:55.472Z">9th of April, 2020 </time><button class="q" aria-label="show description" hidden>[?]</button></div></header><main><figure><a href="/images/comic2.png"><img src="/images/comic2.png" alt="Old Rainbow comic strip with the text changed. The dialogue is now about finger sucking because all the characters appear to have their fingers in their mouths. (press to enlarge)" aria-describedby="meta" loading="lazy"></a></figure></main><nav aria-label="posts"><ul><li><a href="/posts/peace/"><svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" class="icon first"><path d="M0,8 16,0 16,16 M0,0 4,0 4,16 0,16"/></svg> <span>first</span></a></li><li><a href="/posts/smiling-marx/"><svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" class="icon prev"><path d="M0,8 16,0 16,16"/></svg> <span>prev</span></a></li><li><a class="random" href="/posts/smiling-marx/"><svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 10" class="icon random"><path d="M0,2 5,2 11,8 13,8 M0,8 5,8 11,2 13,2" fill="none" stroke-width="2" stroke="currentColor"/><path d="M13,0 16,2 13,4" fill="#000"/><path d="M13,6 16,8 13,10" fill="#000"/></svg> <span>random</span></a></li><li><a href="/posts/cern/"><svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" class="icon next"><path d="M0,0 16,8 0,16"/></svg> <span>next</span></a></li><li><a href="/posts/cern/"><svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" class="icon last"><path d="M0,0 16,8 0,16 M12,0 16,0 16,16 12,16"/></svg> <span>last</span></a></li></ul><div class="meta">by <a href="https://heydonworks.com">Heydon Pickering</a> &middot; <a href="/feed.xml"><span>RSS</span></a> &middot; <a href="https://github.com/heydon/ga11ery">Get yours!</a></div></nav><script type="module">(function() {
     const randomBtn = document.querySelector('.random');
-    const randomFive = '/posts/peace/,/posts/cern/,/posts/smiling-marx/'.split(',');
+    const randomFive = '/posts/cern/,/posts/smiling-marx/,/posts/peace/'.split(',');
     const randomNew = randomFive[Math.floor(Math.random() * randomFive.length)];
     randomBtn.href = randomNew;
   })();</script></div><div role="dialog" aria-labelledby="desc" tabindex="-1"><div><p id="desc">Rainbow was a British television series. It wasn&#39;t very good, and its companion comic was even worse.</p><button class="close" aria-label="close" hidden>[close]</button></div></div><script type="module">(function() {
@@ -25,14 +25,26 @@
         button.hidden = false;
         close.hidden = false;
 
-        button.addEventListener('click', () => {
+        const openDesc = () => {
           dialog.hidden = false;
           wrapper.setAttribute('inert', 'inert');
           dialog.focus();
-        });
+          window.addEventListener('keydown', function escaped(e) {
+            if (e.key === 'Escape') {
+              closeDesc();
+              window.removeEventListener('keydown', escaped);
+            }
+          });
+        }
 
-        close.addEventListener('click', () => {
+        const closeDesc = () => {
           dialog.hidden = true;
+          wrapper.removeAttribute('inert');
           button.focus();
-        })
+        }
+
+        button.addEventListener('click', openDesc);
+        close.addEventListener('click', closeDesc);
+
+
       })();</script></body></html>

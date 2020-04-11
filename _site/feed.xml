@@ -2,7 +2,7 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
   <channel>
     <title>Ga11ery</title>
-    <link>https://dazzling-villani-a8d2cc.netlify.com</link>
+    <link>https://goofy-nightingale-8088ae.netlify.com</link>
     <description>An Eleventy gallery starter kit</description>
     <language>en-us</language>
     <lastBuildDate>2020-04-02T15:51:06.349Z</lastBuildDate>
@@ -10,41 +10,41 @@
     
     <item>
       <title>Peace</title>
-      <link>https://dazzling-villani-a8d2cc.netlify.com/posts/peace/</link>
+      <link>https://goofy-nightingale-8088ae.netlify.com/posts/peace/</link>
       <pubDate>2020-04-08T15:59:36.910Z</pubDate>
-      <guid>https://dazzling-villani-a8d2cc.netlify.com/posts/peace/</guid>
+      <guid>https://goofy-nightingale-8088ae.netlify.com/posts/peace/</guid>
       <description>
-        <img src="https://dazzling-villani-a8d2cc.netlify.com/images/peace.png" alt="The sea weaves inland, between eroded rocks. A shoal of fish is seen darting under the water. A woman in a boat and a man swimming enjoy the sun." />
+        <img src="https://goofy-nightingale-8088ae.netlify.com/images/peace.png" alt="The sea weaves inland, between eroded rocks. A shoal of fish is seen darting under the water. A woman in a boat and a man swimming enjoy the sun." />
       </description>
     </item>
     
     <item>
       <title>Smiling Marx</title>
-      <link>https://dazzling-villani-a8d2cc.netlify.com/posts/smiling-marx/</link>
+      <link>https://goofy-nightingale-8088ae.netlify.com/posts/smiling-marx/</link>
       <pubDate>2020-04-08T16:50:09.567Z</pubDate>
-      <guid>https://dazzling-villani-a8d2cc.netlify.com/posts/smiling-marx/</guid>
+      <guid>https://goofy-nightingale-8088ae.netlify.com/posts/smiling-marx/</guid>
       <description>
-        <img src="https://dazzling-villani-a8d2cc.netlify.com/images/marx.png" alt="The heavily bearded Karl Marx smiles brightly. Line drawing." />
+        <img src="https://goofy-nightingale-8088ae.netlify.com/images/marx.png" alt="The heavily bearded Karl Marx smiles brightly. Line drawing." />
       </description>
     </item>
     
     <item>
       <title>In Training</title>
-      <link>https://dazzling-villani-a8d2cc.netlify.com/posts/in-training/</link>
+      <link>https://goofy-nightingale-8088ae.netlify.com/posts/in-training/</link>
       <pubDate>2020-04-09T10:01:55.472Z</pubDate>
-      <guid>https://dazzling-villani-a8d2cc.netlify.com/posts/in-training/</guid>
+      <guid>https://goofy-nightingale-8088ae.netlify.com/posts/in-training/</guid>
       <description>
-        <img src="https://dazzling-villani-a8d2cc.netlify.com/images/comic2.png" alt="Old Rainbow comic strip with the text changed. The dialogue is now about finger sucking because all the characters appear to have their fingers in their mouths." />
+        <img src="https://goofy-nightingale-8088ae.netlify.com/images/comic2.png" alt="Old Rainbow comic strip with the text changed. The dialogue is now about finger sucking because all the characters appear to have their fingers in their mouths." />
       </description>
     </item>
     
     <item>
       <title>CERN</title>
-      <link>https://dazzling-villani-a8d2cc.netlify.com/posts/cern/</link>
+      <link>https://goofy-nightingale-8088ae.netlify.com/posts/cern/</link>
       <pubDate>2020-04-09T16:07:44.235Z</pubDate>
-      <guid>https://dazzling-villani-a8d2cc.netlify.com/posts/cern/</guid>
+      <guid>https://goofy-nightingale-8088ae.netlify.com/posts/cern/</guid>
       <description>
-        <img src="https://dazzling-villani-a8d2cc.netlify.com/images/cern1.jpg" alt="A silhouette of a man standing at the bottom of a vast cylindrical structure" />
+        <img src="https://goofy-nightingale-8088ae.netlify.com/images/cern1.jpg" alt="A silhouette of a man standing at the bottom of a vast cylindrical structure" />
       </description>
     </item>
     

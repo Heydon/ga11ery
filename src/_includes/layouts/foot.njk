@@ -25,16 +25,28 @@
         button.hidden = false;
         close.hidden = false;
 
-        button.addEventListener('click', () => {
+        const openDesc = () => {
           dialog.hidden = false;
           wrapper.setAttribute('inert', 'inert');
           dialog.focus();
-        });
+          window.addEventListener('keydown', function escaped(e) {
+            if (e.key === 'Escape') {
+              closeDesc();
+              window.removeEventListener('keydown', escaped);
+            }
+          });
+        }
 
-        close.addEventListener('click', () => {
+        const closeDesc = () => {
           dialog.hidden = true;
+          wrapper.removeAttribute('inert');
           button.focus();
-        })
+        }
+
+        button.addEventListener('click', openDesc);
+        close.addEventListener('click', closeDesc);
+
+
       })();
     </script>
     {% endif %}
