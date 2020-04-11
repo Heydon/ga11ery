@@ -44,6 +44,10 @@ nav, header, main {
   padding: 2em 1em;
 }
 
+figure > a {
+  display: block; /* so outline appears in Chrome */
+}
+
 main {
   padding: 0 1em;
 }
