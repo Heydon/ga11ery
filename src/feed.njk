@@ -10,7 +10,7 @@ eleventyExcludeFromCollections: true
     <description>{{ site.description }}</description>
     <language>en-us</language>
     <lastBuildDate>{{ page.date | w3cDateFilter }}</lastBuildDate>
-    <atom:link href="https://every-layout.dev/feed.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="{{ site.fullUrl }}/feed.xml" rel="self" type="application/rss+xml" />
     {% for post in collections.posts %}
     <item>
       <title>{{ post.data.title }}</title>
