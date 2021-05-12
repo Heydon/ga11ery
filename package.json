@@ -24,7 +24,7 @@
     "cross-env": "^7.0.2",
     "cssnano": "^4.1.10",
     "html-minifier": "^4.0.0",
-    "postcss": "^7.0.27",
+    "postcss": "^8.2.10",
     "postcss-cli": "^7.1.0"
   }
 }
